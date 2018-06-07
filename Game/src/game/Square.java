@@ -10,19 +10,19 @@ public class Square {
         covered = isCovered;
     }
     
-    void addShip() {
+    public void addShip() {
         ship = true;
     }
     
-    boolean isCovered() {
+    public boolean isCovered() {
         return covered;
     }
     
-    boolean isShip() {
+    public boolean isShip() {
         return ship;
     }
     
-    void uncover() {
+    public void uncover() {
         covered = false;
     }
     

@@ -1,37 +1,29 @@
 package game;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Ship {
     
-    List<List<Boolean>> ship;
+    private int height;
+    private int width;
+    //private boolean horizontal;
     
-    public List<List<Boolean>> getShape(int rotation) {
-        List<List<Boolean>> ret;
-        
-        /*if (rotation == 0) {
-            ret = new ArrayList<>();
-            
-            for (int i = 0; i < ship.size(); ++i) {
-                ret.add(new ArrayList<>());
-            }
-            
-            for (int i = 0; i < ship.size(); ++i) {
-                for (int j = 0; j < )
-            }
-            //ret = new Boolean[ship.length][ship[0].length];
-        } else if (rotation == 90) {
-            ret = new Boolean[ship[0].length][ship.length];
-            for (int i = 0; i < ship[0].length; ++i) {
-                for (int j = 0; j < ship.length; ++j) {
-                    
-                }
-            }
-        }*/
-        
-        return ship;
-        /*return rotated*/
+    Ship(int h, int w) {
+        height = h;
+        width = w;
+        //horizontal = true;
+    }
+    
+    public void rotate() {
+        int tmp = height;
+        height = width;
+        width = tmp;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWidth() {
+        return width;
     }
     
 }
